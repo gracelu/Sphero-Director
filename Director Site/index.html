@@ -1,0 +1,61 @@
+<html>
+
+<style>
+.chart {
+
+}
+
+.main text {
+    font: 10px sans-serif;	
+}
+
+.axis line, .axis path {
+    shape-rendering: crispEdges;
+    stroke: black;
+    fill: none;
+}
+
+circle {
+    fill: steelblue;
+}
+
+</style>
+
+<link rel="stylesheet" href="styleguide.css">
+
+<pheading>Welcome to Director!</pheading>
+<p>
+    <head>
+        <title>Sphero Director</title>
+        <script type="text/javascript" src="code.js"></script>
+    </head>
+    <body>
+    	<h2> Enter Coordinates: </h2>
+        <input type="text" id="type_box" />
+        
+        <button onclick="enter_coordinate()">Enter</button>
+        <p>
+        <div id="output">Coordinates:</div>
+    </body>
+
+
+<script type="text/javascript" src="http://mbostock.github.com/d3/d3.v2.js"></script>
+      </head>
+      <body>
+        <div class='content'>
+          <!-- /the chart goes here -->
+        </div>
+        <script type="text/javascript" src="scatterchart.js"></script>
+ </body>
+
+
+    <h2> Interactive Coordinates</h2>
+
+<div class="clearfix">
+<div style="width:230px;height:20px;text-align:center;clear:both;">X</div>
+<div style="width:20px;padding-top:40px;float:left;">Y</div>
+<div style="width:402px;float:left"><iframe src="trycanvas_coordinates.htm" frameborder="0" style="border:0;overflow:hidden;width:400px;height:120px;"></iframe></div>
+</div>
+
+
+</html>
