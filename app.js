@@ -1,5 +1,15 @@
 "use strict";
 
+var SerialPort = require("serialport").SerialPort;
+var serialPort = new SerialPort("/dev/rfcomm0", {
+  baudrate: 57600
+});
+
+var SerialPort2 = require("serialport").SerialPort2;
+var serialPort2 = new SerialPort("COM4", {
+  baudrate: 9600
+});
+
 var sphero = require("sphero");
 var orb = sphero("COM4");
 
@@ -45,6 +55,7 @@ function roll_distance(x1, y1, x2, y2, speed){
   
 }
 
+function direct(coordinates){
 var i=0;
 
 orb.connect(function() {
@@ -78,3 +89,4 @@ orb.connect(function() {
   });
 
 });
+}
